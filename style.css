@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.urna{
+    width:50rem ;
+    height:25rem;
+    display: flex;
+    background-color: #567;
+    padding: 1rem;
+    border-radius: 20px;
+}
+/* -------TELA-------*/
+.tela{
+    padding: 1rem;
+    background-image: linear-gradient(to right, #fff, rgb(169, 169, 169));
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+    "seuvotopara seuvotopara foto"
+    "cargo cargo foto"
+    "boxvoto boxvoto foto"
+    "dados dados foto"
+    "instrucao instrucao instrucao"
+    ;
+    grid-template-columns:12.5rem 6.25rem ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.seuvotopara{
+    grid-area: seuvotopara;
+}
+.cargo{
+    grid-area: cargo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxvoto{
+    grid-area: boxvoto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxvoto span{
+    border: 1px solid #000;
+    height: 2.8rem;
+    width: 2rem;
+    padding: 0.3rem;
+    text-align: center;
+    margin: 0.2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all ease 0.5s;
+}
+.pisca{
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes pisca{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.dados{
+    grid-area: dados;
+    display: flex;
+    align-items: center;
+    line-height: 1.8rem;
+}
+.nulo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.instrucao{
+    border-top: 1px solid #000;
+    grid-area: instrucao;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: flex-end;
+}
+.foto{
+    grid-area: foto;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foto img{
+    width: 110px;
+}
+.foto .small{
+    width: 60px;
+}
+.fim{
+    background-image: linear-gradient(to right, #fff, rgb(169, 169, 169));
+    padding: 1rem;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+}
+
+
+/* -------TECLADO-------*/
+.teclado{
+    background-color: rgb(7, 15, 31);
+    padding: 1rem;
+    width: 40%;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "btn1 btn2 btn3"
+    "btn4 btn5 btn6"
+    "btn7 btn8 btn9"
+    ". btn0 ."
+    "btnbranco btncorrige btnconfirma"
+    ;
+}
+.btn{
+    background-color: #567;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#btn-1{grid-area: btn1;}
+#btn-2{grid-area: btn2;}
+#btn-3{grid-area: btn3;}
+#btn-3{grid-area: btn3;}
+#btn-4{grid-area: btn4;}
+#btn-5{grid-area: btn5;}
+#btn-6{grid-area: btn6;}
+#btn-7{grid-area: btn7;}
+#btn-8{grid-area: btn8;}
+#btn-9{grid-area: btn9;}
+#btn-0{grid-area: btn0;}
+#btn-corrige{grid-area: btncorrige;
+background-color: rgb(136, 81, 9);}
+#btn-branco{grid-area: btnbranco;
+background-color: #fff;
+color: #000;}
+#btn-confirma{grid-area: btnconfirma;
+background-color: green;}
+#btn-branco,
+#btn-corrige{
+    height: 75%;
+    align-self: flex-end;
+}

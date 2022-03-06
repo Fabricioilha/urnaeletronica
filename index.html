@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Urna Eletrônica</title>
+</head>
+<body>
+    <div class="urna">
+        <div class="tela">
+            <div class="seuvotopara"><p>Seu Voto Para</p></div>
+            <div class="cargo"><h2></h2></div>
+            <div class="boxvoto">
+                <span class="pisca">1</span>
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+            </div>
+            <div class="dados"></div>
+            <div class="instrucao">
+                <p>
+                    Aperte a tecla: <br>
+                    CONFIRMA para Confirmar seu voto <br>
+                    CORRIGE para Reiniciar o procedimento
+                </p>
+            </div>
+            <div class="foto"></div>
+        </div>
+        <div class="teclado">
+            <button class="btn" id="btn-1" onclick="btnClick(1)">1</button>
+            <button class="btn" id="btn-2" onclick="btnClick(2)">2</button>
+            <button class="btn" id="btn-3" onclick="btnClick(3)">3</button>
+            <button class="btn" id="btn-4" onclick="btnClick(4)">4</button>
+            <button class="btn" id="btn-5" onclick="btnClick(5)">5</button>
+            <button class="btn" id="btn-6" onclick="btnClick(6)">6</button>
+            <button class="btn" id="btn-7" onclick="btnClick(7)">7</button>
+            <button class="btn" id="btn-8" onclick="btnClick(8)">8</button>
+            <button class="btn" id="btn-9" onclick="btnClick(9)">9</button>
+            <button class="btn" id="btn-0" onclick="btnClick(0)">0</button>
+            <button class="btn" id="btn-corrige" onclick="btnCorrige()">Corrige</button>
+            <button class="btn" id="btn-branco" onclick="btnBranco()">Branco</button>
+            <button class="btn" id="btn-confirma" onclick="btnConfirma()">Confirma</button>
+        </div>
+    </div>
+    <script src="etapas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
