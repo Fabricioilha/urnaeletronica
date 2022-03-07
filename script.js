@@ -51,10 +51,10 @@ function btnClick(n){
                 for(let i = 0; i < jsonNumCandidato[0].fotos.length; i++){
                     if(i == 0){
                         foto.innerHTML +=`
-                        <img src="images/${jsonNumCandidato[0].fotos[i].url}" alt="">${jsonNumCandidato[0].fotos[i].legenda}`;
+                        <img src="./${jsonNumCandidato[0].fotos[i].url}" alt="">${jsonNumCandidato[0].fotos[i].legenda}`;
                     }else{
                         foto.innerHTML +=`
-                        <img class="small" src="images/${jsonNumCandidato[0].fotos[i].url}" alt="">${jsonNumCandidato[0].fotos[i].legenda}`;
+                        <img class="small" src="./${jsonNumCandidato[0].fotos[i].url}" alt="">${jsonNumCandidato[0].fotos[i].legenda}`;
                     }
                 }
 
